@@ -1,0 +1,22 @@
+[workspace]
+members = ["mcl-core", "mcl-cli"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "fs", "process", "sync", "time", "io-util", "signal"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["json", "stream", "gzip", "http2"] }
+serde = { version = "1", features = ["derive"] }
+directories = "4.0"
+serde_json = "1"
+thiserror = "2.0.21"
+tracing = "0.1"
+futures = "0.3"
+sha1 = "0.11.0"
+hex = "0.4"
+url = "2.5.8"
+md5 = "0.8.1"
+tokio-test = { version = "0.4.6" }
